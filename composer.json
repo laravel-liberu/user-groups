@@ -1,0 +1,52 @@
+{
+    "name": "laravel-enso/user-groups",
+    "type": "library",
+    "description": "",
+    "authors": [
+        {
+            "name": "Adrian Ocneanu",
+            "email": "aocneanu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Mihai Ocneanu",
+            "email": "mihai.ocneanu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Ionut Pirvulescu",
+            "email": "ionut.pirvulescu1@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Vlad Chiovianu",
+            "email": "vlad.chiovianu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "laravel-enso",
+        "enso-core",
+        "user-groups"
+    ],
+    "homepage": "https://www.laravel-enso.com",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEnso\\UserGroups\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelEnso\\UserGroups\\AppServiceProvider"
+            ]
+        }
+    }
+}
