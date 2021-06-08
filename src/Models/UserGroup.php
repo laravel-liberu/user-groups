@@ -5,12 +5,12 @@ namespace LaravelEnso\UserGroups\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use LaravelEnso\Core\Models\User;
 use LaravelEnso\Rememberable\Traits\Rememberable;
 use LaravelEnso\Roles\Models\Role;
 use LaravelEnso\Roles\Traits\HasRoles;
 use LaravelEnso\Tables\Traits\TableCache;
 use LaravelEnso\UserGroups\Exceptions\UserGroupConflict;
+use LaravelEnso\Users\Models\User;
 
 class UserGroup extends Model
 {

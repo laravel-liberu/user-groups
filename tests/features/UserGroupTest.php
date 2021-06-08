@@ -3,12 +3,12 @@
 namespace LaravelEnso\UserGroups\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use LaravelEnso\Core\Models\User;
 use LaravelEnso\Forms\TestTraits\CreateForm;
 use LaravelEnso\Forms\TestTraits\DestroyForm;
 use LaravelEnso\Forms\TestTraits\EditForm;
 use LaravelEnso\Tables\Traits\Tests\Datatable;
 use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelEnso\Users\Models\User;
 use Tests\TestCase;
 
 class UserGroupTest extends TestCase
