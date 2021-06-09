@@ -27,6 +27,6 @@ class ValidateUserGroupRequest extends FormRequest
     protected function nameUnique()
     {
         return Rule::unique('user_groups', 'name')
-            ->ignore(optional($this->route('userGroup'))->id);
+            ->ignore($this->route('userGroup')?->id);
     }
 }
