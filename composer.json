@@ -1,7 +1,8 @@
 {
     "name": "laravel-enso/user-groups",
     "type": "library",
-    "description": "",
+    "description": "User groups dependency for Laravel Enso",
+    "license": "MIT",
     "authors": [
         {
             "name": "Adrian Ocneanu",
@@ -16,12 +17,6 @@
             "role": "Developer"
         },
         {
-            "name": "Ionut Pirvulescu",
-            "email": "ionut.pirvulescu1@gmail.com",
-            "homepage": "https://laravel-enso.com",
-            "role": "Developer"
-        },
-        {
             "name": "Vlad Chiovianu",
             "email": "vlad.chiovianu@gmail.com",
             "homepage": "https://laravel-enso.com",
@@ -30,8 +25,9 @@
     ],
     "keywords": [
         "laravel-enso",
-        "enso-core",
-        "user-groups"
+        "user-groups",
+        "vue-bulma",
+        "vue-spa"
     ],
     "homepage": "https://www.laravel-enso.com",
     "require": {
