@@ -2,6 +2,7 @@
 
 namespace LaravelEnso\UserGroups\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
@@ -39,7 +40,7 @@ class UserGroup extends Model
         parent::delete();
     }
 
-    public function scopeVisible($query)
+    public function scopeVisible(Builder $query): Builder
     {
         $isSuperior = Auth::user()->belongsToAdminGroup();
 
