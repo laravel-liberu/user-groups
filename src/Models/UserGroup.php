@@ -5,10 +5,12 @@ namespace LaravelEnso\UserGroups\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use LaravelEnso\Rememberable\Traits\Rememberable;
 use LaravelEnso\Roles\Models\Role;
 use LaravelEnso\Roles\Traits\HasRoles;
 use LaravelEnso\Tables\Traits\TableCache;
+use LaravelEnso\UserGroups\Enums\UserGroups;
 use LaravelEnso\UserGroups\Exceptions\UserGroupConflict;
 use LaravelEnso\Users\Models\User;
 
@@ -39,9 +41,12 @@ class UserGroup extends Model
 
     public function scopeVisible($query)
     {
-        return $query->when(
-            ! Auth::user()->belongsToAdminGroup(),
-            fn ($query) => $query->whereId(Auth::user()->group_id)
-        );
+        $isSuperior = Auth::user()->belongsToAdminGroup();
+
+        return $query->when(! $isSuperior, fn ($query) => $query->when(
+            Config::get('enso.user-groups.restrictedToOwnGroup'),
+            fn ($query) => $query->whereId(Auth::user()->group_id),
+            fn ($query) => $query->where('id', '<>', UserGroups::Admin),
+        ));
     }
 }
