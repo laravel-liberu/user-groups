@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
         ], ['user-groups-factories', 'enso-factories']);
 
         $this->publishes([
-            __DIR__.'/../database/seeds' => database_path('seeds'),
+            __DIR__.'/../database/seeders' => database_path('seeders'),
         ], ['user-groups-seeders', 'enso-seeders']);
     }
 }
