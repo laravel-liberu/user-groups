@@ -3,11 +3,11 @@
 namespace LaravelEnso\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Forms\Builders\UserGroupForm;
+use LaravelEnso\UserGroups\Forms\Builders\UserGroup;
 
 class Create extends Controller
 {
-    public function __invoke(UserGroupForm $form)
+    public function __invoke(UserGroup $form)
     {
         return ['form' => $form->create()];
     }
