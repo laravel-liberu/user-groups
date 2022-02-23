@@ -13,7 +13,11 @@ use Tests\TestCase;
 
 class UserGroupTest extends TestCase
 {
-    use CreateForm, Datatable, DestroyForm, EditForm, RefreshDatabase;
+    use CreateForm;
+    use Datatable;
+    use DestroyForm;
+    use EditForm;
+    use RefreshDatabase;
 
     private $permissionGroup = 'administration.userGroups';
     private $testModel;

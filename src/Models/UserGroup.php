@@ -17,10 +17,10 @@ use LaravelEnso\Users\Models\User;
 
 class UserGroup extends Model
 {
-    use HasFactory,
-        HasRoles,
-        Rememberable,
-        TableCache;
+    use HasFactory;
+    use HasRoles;
+    use Rememberable;
+    use TableCache;
 
     protected $guarded = ['id'];
 
