@@ -45,7 +45,7 @@ class UserGroupTest extends TestCase
             ->assertJsonStructure(['message'])
             ->assertJsonFragment([
                 'redirect' => 'administration.userGroups.edit',
-                'param' => ['userGroup' => $group->id],
+                'param'    => ['userGroup' => $group->id],
             ]);
     }
 
@@ -62,7 +62,8 @@ class UserGroupTest extends TestCase
                 'roles' => $this->testModel->roles()
                     ->pluck('id')
                     ->toArray(),
-            ])->assertStatus(200)
+            ]
+        )->assertStatus(200)
             ->assertJsonStructure(['message']);
 
         $this->assertEquals('edited', $this->testModel->fresh()->name);

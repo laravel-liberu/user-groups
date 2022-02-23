@@ -16,9 +16,9 @@ class Store extends Controller
         );
 
         return [
-            'message' => __('The user group was successfully created'),
+            'message'  => __('The user group was successfully created'),
             'redirect' => 'administration.userGroups.edit',
-            'param' => ['userGroup' => $userGroup->id],
+            'param'    => ['userGroup' => $userGroup->id],
         ];
     }
 }

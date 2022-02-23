@@ -18,9 +18,9 @@ class ValidateUserGroup extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', $this->nameUnique()],
+            'name'        => ['required', $this->nameUnique()],
             'description' => 'nullable',
-            'roles' => 'array',
+            'roles'       => 'array',
         ];
     }
 
