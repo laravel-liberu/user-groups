@@ -3,12 +3,12 @@
 namespace LaravelEnso\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Http\Requests\ValidateUserGroupRequest;
+use LaravelEnso\UserGroups\Http\Requests\ValidateUserGroup;
 use LaravelEnso\UserGroups\Models\UserGroup;
 
 class Update extends Controller
 {
-    public function __invoke(ValidateUserGroupRequest $request, UserGroup $userGroup)
+    public function __invoke(ValidateUserGroup $request, UserGroup $userGroup)
     {
         $userGroup->updateWithRoles(
             $request->validatedExcept('roles'),

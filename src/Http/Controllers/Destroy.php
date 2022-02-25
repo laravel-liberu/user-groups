@@ -12,7 +12,7 @@ class Destroy extends Controller
         $userGroup->delete();
 
         return [
-            'message' => __('The user group was successfully deleted'),
+            'message'  => __('The user group was successfully deleted'),
             'redirect' => 'administration.userGroups.index',
         ];
     }

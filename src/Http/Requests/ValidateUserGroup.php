@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use LaravelEnso\Helpers\Traits\FiltersRequest;
 
-class ValidateUserGroupRequest extends FormRequest
+class ValidateUserGroup extends FormRequest
 {
     use FiltersRequest;
 
@@ -18,9 +18,9 @@ class ValidateUserGroupRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', $this->nameUnique()],
+            'name'        => ['required', $this->nameUnique()],
             'description' => 'nullable',
-            'roles' => 'array',
+            'roles'       => 'array',
         ];
     }
 

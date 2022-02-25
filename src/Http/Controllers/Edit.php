@@ -3,12 +3,12 @@
 namespace LaravelEnso\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Forms\Builders\UserGroupForm;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelEnso\UserGroups\Forms\Builders\UserGroup;
+use LaravelEnso\UserGroups\Models\UserGroup as Model;
 
 class Edit extends Controller
 {
-    public function __invoke(UserGroup $userGroup, UserGroupForm $form)
+    public function __invoke(Model $userGroup, UserGroup $form)
     {
         return ['form' => $form->edit($userGroup)];
     }

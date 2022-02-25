@@ -3,12 +3,12 @@
 namespace LaravelEnso\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Http\Requests\ValidateUserGroupRequest;
+use LaravelEnso\UserGroups\Http\Requests\ValidateUserGroup;
 use LaravelEnso\UserGroups\Models\UserGroup;
 
 class Store extends Controller
 {
-    public function __invoke(ValidateUserGroupRequest $request, UserGroup $userGroup)
+    public function __invoke(ValidateUserGroup $request, UserGroup $userGroup)
     {
         $userGroup = $userGroup->storeWithRoles(
             $request->validatedExcept('roles'),
@@ -16,9 +16,9 @@ class Store extends Controller
         );
 
         return [
-            'message' => __('The user group was successfully created'),
+            'message'  => __('The user group was successfully created'),
             'redirect' => 'administration.userGroups.edit',
-            'param' => ['userGroup' => $userGroup->id],
+            'param'    => ['userGroup' => $userGroup->id],
         ];
     }
 }

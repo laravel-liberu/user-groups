@@ -17,7 +17,10 @@ use LaravelEnso\Users\Models\User;
 
 class UserGroup extends Model
 {
-    use HasFactory, HasRoles, Rememberable, TableCache;
+    use HasFactory;
+    use HasRoles;
+    use Rememberable;
+    use TableCache;
 
     protected $guarded = ['id'];
 
@@ -44,7 +47,7 @@ class UserGroup extends Model
     {
         $isSuperior = Auth::user()->belongsToAdminGroup();
 
-        return $query->when(! $isSuperior, fn ($query) => $query->when(
+        return $query->when(!$isSuperior, fn ($query) => $query->when(
             Config::get('enso.user-groups.restrictedToOwnGroup'),
             fn ($query) => $query->whereId(Auth::user()->group_id),
             fn ($query) => $query->where('id', '<>', UserGroups::Admin),
