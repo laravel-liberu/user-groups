@@ -2,7 +2,7 @@
 
 use LaravelEnso\Migrator\Database\Migration;
 
-class CreateStructureForUserGroups extends Migration
+return new class extends Migration
 {
     protected array $permissions = [
         ['name' => 'administration.userGroups.initTable', 'description' => 'Init table for userGroups', 'is_default' => false],
@@ -22,4 +22,4 @@ class CreateStructureForUserGroups extends Migration
     ];
 
     protected ?string $parentMenu = 'Administration';
-}
+};
