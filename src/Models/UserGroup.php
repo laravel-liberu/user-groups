@@ -12,7 +12,7 @@ use LaravelEnso\Roles\Models\Role;
 use LaravelEnso\Roles\Traits\HasRoles;
 use LaravelEnso\Tables\Traits\TableCache;
 use LaravelEnso\UserGroups\Enums\UserGroups;
-use LaravelEnso\UserGroups\Exceptions\UserGroupConflict;
+use LaravelEnso\UserGroups\Exceptions\Conflict;
 use LaravelEnso\Users\Models\User;
 
 class UserGroup extends Model
@@ -37,8 +37,10 @@ class UserGroup extends Model
     public function delete()
     {
         if ($this->users()->exists()) {
-            throw UserGroupConflict::hasUsers();
+            throw Conflict::hasUsers();
         }
+
+        $this->roles()->detach();
 
         parent::delete();
     }
@@ -47,7 +49,7 @@ class UserGroup extends Model
     {
         $isSuperior = Auth::user()->belongsToAdminGroup();
 
-        return $query->when(!$isSuperior, fn ($query) => $query->when(
+        return $query->when(! $isSuperior, fn ($query) => $query->when(
             Config::get('enso.user-groups.restrictedToOwnGroup'),
             fn ($query) => $query->whereId(Auth::user()->group_id),
             fn ($query) => $query->where('id', '<>', UserGroups::Admin),
