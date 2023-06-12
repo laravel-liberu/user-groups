@@ -54,5 +54,8 @@
                 "LaravelEnso\\UserGroups\\AppServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "rector/rector": "^0.17.0"
     }
 }
