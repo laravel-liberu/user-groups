@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
 
     private function load(): self
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/user-groups.php', 'enso.user-groups');
+        $this->mergeConfigFrom(__DIR__.'/../config/user-groups.php', 'liberu.user-groups');
 
         $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
@@ -26,15 +26,15 @@ class AppServiceProvider extends ServiceProvider
     private function publish(): void
     {
         $this->publishes([
-            __DIR__.'/../config' => config_path('enso'),
-        ], ['user-groups-config', 'enso-config']);
+            __DIR__.'/../config' => config_path('liberu'),
+        ], ['user-groups-config', 'liberu-config']);
 
         $this->publishes([
             __DIR__.'/../database/factories' => database_path('factories'),
-        ], ['user-groups-factories', 'enso-factories']);
+        ], ['user-groups-factories', 'liberu-factories']);
 
         $this->publishes([
             __DIR__.'/../database/seeders' => database_path('seeders'),
-        ], ['user-groups-seeders', 'enso-seeders']);
+        ], ['user-groups-seeders', 'liberu-seeders']);
     }
 }

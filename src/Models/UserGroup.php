@@ -50,7 +50,7 @@ class UserGroup extends Model
         $isSuperior = Auth::user()->belongsToAdminGroup();
 
         return $query->when(! $isSuperior, fn ($query) => $query->when(
-            Config::get('enso.user-groups.restrictedToOwnGroup'),
+            Config::get('liberu.user-groups.restrictedToOwnGroup'),
             fn ($query) => $query->whereId(Auth::user()->group_id),
             fn ($query) => $query->where('id', '<>', UserGroups::Admin),
         ));
