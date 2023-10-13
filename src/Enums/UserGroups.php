@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Enums;
+namespace LaravelLiberu\UserGroups\Enums;
 
-use LaravelEnso\Enums\Services\Enum;
+use LaravelLiberu\Enums\Services\Enum;
 
 class UserGroups extends Enum
 {

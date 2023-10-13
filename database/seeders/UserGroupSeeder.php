@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Database\Seeders;
+namespace LaravelLiberu\UserGroups\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use LaravelEnso\Roles\Models\Role;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelLiberu\Roles\Models\Role;
+use LaravelLiberu\UserGroups\Models\UserGroup;
 
 class UserGroupSeeder extends Seeder
 {

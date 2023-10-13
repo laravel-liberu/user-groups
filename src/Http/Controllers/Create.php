@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Http\Controllers;
+namespace LaravelLiberu\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Forms\Builders\UserGroup;
+use LaravelLiberu\UserGroups\Forms\Builders\UserGroup;
 
 class Create extends Controller
 {

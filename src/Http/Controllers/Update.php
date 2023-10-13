@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Http\Controllers;
+namespace LaravelLiberu\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\UserGroups\Http\Requests\ValidateUserGroup;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelLiberu\UserGroups\Http\Requests\ValidateUserGroup;
+use LaravelLiberu\UserGroups\Models\UserGroup;
 
 class Update extends Controller
 {

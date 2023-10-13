@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Forms\Builders;
+namespace LaravelLiberu\UserGroups\Forms\Builders;
 
-use LaravelEnso\Forms\Services\Form;
-use LaravelEnso\UserGroups\Models\UserGroup as Model;
+use LaravelLiberu\Forms\Services\Form;
+use LaravelLiberu\UserGroups\Models\UserGroup as Model;
 
 class UserGroup
 {

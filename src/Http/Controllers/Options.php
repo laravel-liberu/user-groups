@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Http\Controllers;
+namespace LaravelLiberu\UserGroups\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use LaravelEnso\Select\Traits\OptionsBuilder;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelLiberu\Select\Traits\OptionsBuilder;
+use LaravelLiberu\UserGroups\Models\UserGroup;
 
 class Options extends Controller
 {

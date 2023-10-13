@@ -1,14 +1,14 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Tests;
+namespace LaravelLiberu\UserGroups\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use LaravelEnso\Forms\TestTraits\CreateForm;
-use LaravelEnso\Forms\TestTraits\DestroyForm;
-use LaravelEnso\Forms\TestTraits\EditForm;
-use LaravelEnso\Tables\Traits\Tests\Datatable;
-use LaravelEnso\UserGroups\Models\UserGroup;
-use LaravelEnso\Users\Models\User;
+use LaravelLiberu\Forms\TestTraits\CreateForm;
+use LaravelLiberu\Forms\TestTraits\DestroyForm;
+use LaravelLiberu\Forms\TestTraits\EditForm;
+use LaravelLiberu\Tables\Traits\Tests\Datatable;
+use LaravelLiberu\UserGroups\Models\UserGroup;
+use LaravelLiberu\Users\Models\User;
 use Tests\TestCase;
 
 class UserGroupTest extends TestCase

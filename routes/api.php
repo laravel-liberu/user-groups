@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use LaravelEnso\UserGroups\Http\Controllers\Create;
-use LaravelEnso\UserGroups\Http\Controllers\Destroy;
-use LaravelEnso\UserGroups\Http\Controllers\Edit;
-use LaravelEnso\UserGroups\Http\Controllers\ExportExcel;
-use LaravelEnso\UserGroups\Http\Controllers\InitTable;
-use LaravelEnso\UserGroups\Http\Controllers\Options;
-use LaravelEnso\UserGroups\Http\Controllers\Store;
-use LaravelEnso\UserGroups\Http\Controllers\TableData;
-use LaravelEnso\UserGroups\Http\Controllers\Update;
+use LaravelLiberu\UserGroups\Http\Controllers\Create;
+use LaravelLiberu\UserGroups\Http\Controllers\Destroy;
+use LaravelLiberu\UserGroups\Http\Controllers\Edit;
+use LaravelLiberu\UserGroups\Http\Controllers\ExportExcel;
+use LaravelLiberu\UserGroups\Http\Controllers\InitTable;
+use LaravelLiberu\UserGroups\Http\Controllers\Options;
+use LaravelLiberu\UserGroups\Http\Controllers\Store;
+use LaravelLiberu\UserGroups\Http\Controllers\TableData;
+use LaravelLiberu\UserGroups\Http\Controllers\Update;
 
 Route::middleware(['api', 'auth', 'core'])
     ->prefix('api/administration/userGroups')

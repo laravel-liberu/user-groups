@@ -43,15 +43,15 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelEnso\\UserGroups\\": "src/",
-            "LaravelEnso\\UserGroups\\Database\\Factories\\": "database/factories/",
-            "LaravelEnso\\UserGroups\\Database\\Seeders\\": "database/seeders/"
+            "LaravelLiberu\\UserGroups\\": "src/",
+            "LaravelLiberu\\UserGroups\\Database\\Factories\\": "database/factories/",
+            "LaravelLiberu\\UserGroups\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelEnso\\UserGroups\\AppServiceProvider"
+                "LaravelLiberu\\UserGroups\\AppServiceProvider"
             ]
         }
     },

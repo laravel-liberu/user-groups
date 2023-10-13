@@ -1,19 +1,19 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Models;
+namespace LaravelLiberu\UserGroups\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
-use LaravelEnso\Rememberable\Traits\Rememberable;
-use LaravelEnso\Roles\Models\Role;
-use LaravelEnso\Roles\Traits\HasRoles;
-use LaravelEnso\Tables\Traits\TableCache;
-use LaravelEnso\UserGroups\Enums\UserGroups;
-use LaravelEnso\UserGroups\Exceptions\Conflict;
-use LaravelEnso\Users\Models\User;
+use LaravelLiberu\Rememberable\Traits\Rememberable;
+use LaravelLiberu\Roles\Models\Role;
+use LaravelLiberu\Roles\Traits\HasRoles;
+use LaravelLiberu\Tables\Traits\TableCache;
+use LaravelLiberu\UserGroups\Enums\UserGroups;
+use LaravelLiberu\UserGroups\Exceptions\Conflict;
+use LaravelLiberu\Users\Models\User;
 
 class UserGroup extends Model
 {

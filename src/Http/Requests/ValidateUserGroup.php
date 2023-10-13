@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Http\Requests;
+namespace LaravelLiberu\UserGroups\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use LaravelEnso\Helpers\Traits\FiltersRequest;
+use LaravelLiberu\Helpers\Traits\FiltersRequest;
 
 class ValidateUserGroup extends FormRequest
 {

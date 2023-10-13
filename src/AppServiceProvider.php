@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelEnso\UserGroups;
+namespace LaravelLiberu\UserGroups;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelEnso\UserGroups\Database\Factories;
+namespace LaravelLiberu\UserGroups\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use LaravelEnso\UserGroups\Models\UserGroup;
+use LaravelLiberu\UserGroups\Models\UserGroup;
 
 class UserGroupFactory extends Factory
 {
