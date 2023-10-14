@@ -1,7 +1,7 @@
 {
     "name": "laravel-liberu/user-groups",
     "type": "library",
-    "description": "User groups dependency for Laravel Enso",
+    "description": "User groups dependency for Laravel Liberu",
     "license": "MIT",
     "authors": [
         {
